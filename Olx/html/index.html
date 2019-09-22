@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olx</title>
+   <link rel="stylesheet" href="../Views/app.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-light bg-faded justify-content-left flex-nowrap flex-row"id="topnav">
+          <a class="navbar-brand" id="olx-tag" href="#" id="tag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/OLX_New_Logo.png" width="80" height="50" class="d-inline-block align-top" alt="">
+          </a>
+          <div class="dropdown" id="drp-down">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="https://img.icons8.com/ios/22/000000/marker.png" > Hyderabad
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Mumbai</a>
+                <a class="dropdown-item" href="#">Chennai</a>
+                <a class="dropdown-item" href="#">Delhi</a>
+                <a class="dropdown-item" href="#">Kolkata</a>
+                <a class="dropdown-item" href="#">Banglore</a>
+              </div>
+            </div>
+          <ul class="navbar-nav ml-auto" id="ul-2">
+            <li>
+              <div class="input-group mb-3" id="div-2">
+                <input type="text" class="form-control" placeholder="Find Cards, Mobile Phones and more..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" id="search" type="button"><img src="https://img.icons8.com/android/25/000000/search.png"></button>
+                  </div>
+              </div>                            
+            </li>
+          </ul>
+        <ul class="nav navbar-nav flex-row" id="ul-3">
+          <li class="nav-item"><button class="btn btn-primary login-btn" data-toggle="modal" data-target="#exampleModalCenter" type="submit">LOGIN</button></li>
+          <li class="nav-item"><button type="button" class="btn btn-primary sell-btn"><img src="https://img.icons8.com/ios/20/000000/compact-camera.png"> SELL</button></li>
+        </ul>
+      </nav>
+            <!-- first nav end -->
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            <!-- second navbar -->
+            <nav class="nav" id="nav-2">
+                <li class="nav-item dropdown items">
+                    <a class="nav-link dropdown-toggle dropdown-opt" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ALL CATEGORIES</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </li>
+              <a class="nav-link" href="#">Cars</a>
+              <a class="nav-link" href="#">Motorcycles</a>
+              <a class="nav-link" href="#">Mobile Phones</a>
+              <a class="nav-link" href="#">For Sale:Houses & Apartments</a>
+              <a class="nav-link" href="#">Scooter</a>
+              <a class="nav-link" href="#">Commercial vehicals</a>
+            </nav>
+            <!-- second navbar end -->
+    
+            <!-- jumbotron -->
+            <div class="jumbotron jumbotron-fluid" id="jumbotron">
+                      <img class="jumbo-img" src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/121657/121657_00_2x.jpg">
+             </div>
+             <!-- jumbotron end -->
+
+             <!-- container start -->
+             <div class="container-fluid" id="main-container">
+                <diV id="fresh"> <p class="fresh">Fresh recommendations</p></diV>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                     <a href=""> <img class="card-img-top" id="img-1" src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Mahindra-Scorpio/6120/1549006757162/front-left-side-47.jpg?tr=w-420,e-sharpen"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                        <div class="card-body" id="body-1">
+                        <h5 class="card-title">₹77,000</h5>
+                        <p class="card-text">Scorip used 2 years old</p>
+                        <p class="bottom-text">Adibatla hyderabad</p>
+                        <p class="date">today</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <a href=""><img class="card-img-top" id="img-1" src="https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href=""><div class="card-body" id="body-1">
+                        <h5 class="card-title">₹1900</h5>
+                        <p class="card-text"> Samsung Mobile Phone </p>
+                        <p class="bottom-text">Adibatla hyderabad</p>
+                        <p class="date">today</p>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3"id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <a href=""><img class="card-img-top" style="width:100px;margin-left: 90px;" id="img-1" src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/lg/lg-g8-thinq/aurora-black/lg-g8-thinq-aurora-black-1-3x.jpg" alt="Card image cap"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                        <div class="card-body" id="body-1">
+                          <h5 class="card-title">₹8000</h5>
+                          <p class="card-text"> Xiaomi mobile</p>
+                          <p class="bottom-text">Malakpet hyderabad</p>
+                          <p class="date">today</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <a href=""><img class="card-img-top" id="img-1" src="data:image/jpeg;base64,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"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹7000000</h5>
+                            <p class="card-text">1 acre land</p>
+                            <p class="bottom-text">Madhapur hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <a href=""><img class="card-img-top" id="img-1" src="https://auto.ndtvimg.com/bike-images/colors/yamaha/fz-s-v20-fi/yamaha-fz-s-v20-fi-lightning-cyan.png?v=1"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹55000</h5>
+                            <p class="card-text"> Yamaha fz good condition</p>
+                            <p class="bottom-text">Malakpet hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <a href=""><img class="card-img-top" id="img-1" src="https://si.wsj.net/public/resources/images/B3-DM067_RIGHTS_IM_20190319162958.jpg"></a>
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹9000000</h5>
+                            <p class="card-text">Well furnished Home</p>
+                            <p class="bottom-text">Jublie hills hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" style="width:200px;" id="img-1" src="https://s3-eu-west-1.amazonaws.com/cc-ecommerce/product_catalog/0002/45/thumb_144334_product_catalog_large.jpeg">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹8000</h5>
+                            <p class="card-text"> Ps4 with 2 games</p>
+                            <p class="bottom-text">Adibatla hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" style="width:150px;" id="img-1" src="https://pixl.varagesale.com/http://s3.amazonaws.com/hopshop-image-store-production/131038263/b74649575c1a8fc4b36e405a2d286f16.jpg?_ver=large_uploader_thumbnail&w=640&h=640&fit=crop&s=55254bc97f790d20865c9bab078c914b">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹7000</h5>
+                            <p class="card-text">Rolex used only for a year</p>
+                            <p class="bottom-text">Adibatla hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" id="img-1" src="https://teja8.kuikr.com/i5/20190831/BRAND-NEW-Canon-EOS-5D-Mark-IV-DSLR-Camera-with-24-105mm-f-4L-II-Lens-BRAND-NEW-VB201705171774173-ak_LWBP982143799-1567204433.jpeg">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹22100</h5>
+                            <p class="card-text">Canon dslr with 2 lens</p>
+                            <p class="bottom-text">Tolichowki hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" style="width: 150px;" id="img-1" src="https://mjolnir-audio.com/wp-content/uploads/2019/02/DSC_0110-2-4.jpg">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <div class="card-body" id="body-1">
+                        <h5 class="card-title">₹2500</h5>
+                        <p class="card-text">Bose OnEar Headphones</p>
+                        <p class="bottom-text">Adibatla hyderabad</p>
+                        <p class="date">today</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" style="width: 200px;" id="img-1" src="https://4.imimg.com/data4/RG/WO/MY-25400969/used-washing-machine-500x500.jpg">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹11000</h5>
+                            <p class="card-text">Samsung washing machine 3 years old selling because I bought a new washing machine </p>
+                            <p class="bottom-text">Adibatla hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xl-3" id="all-cards-1">
+                    <div class="card" id="card-1" style="width: 18rem;">
+                      <img class="card-img-top" id="img-1" src="https://media.4rgos.it/i/Argos/6202431_R_Z001A?w=750&h=440&qlt=70">
+                      <a class="heart" href=""><img src="https://img.icons8.com/ios/25/000000/like.png"></a>
+                      <a href="">
+                          <div class="card-body" id="body-1">
+                            <h5 class="card-title">₹900</h5>
+                            <p class="card-text">5 kg dumbells</p>
+                            <p class="bottom-text">Koti hyderabad</p>
+                            <p class="date">today</p>
+                          </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row End -->
+
+                <!-- flex box -->
+                <div class="d-flex justify-content-center load-div">
+                  <button type="button" class="btn btn-outline-primary load-btn ">Load More</button>
+                </div>
+            </div>
+            <!-- container end -->
+
+            <!-- second container -->
+            <div class="container-fluid" id="second-container">
+              <div class="row">
+                <div class="col-sm-12 col-lg-5 col-xl-5 mobile-col">
+                  <img class="mobile" src="https://mobile.panasonic.com/content/products/eluga-x1/gallery/eluga-x1-mobiles.jpg">
+                </div>
+                <div class="col-sm-12 col-lg-4 col-xl-4 text-col">
+                    <div class="br-right">
+                        <h3>TRY THE OLX APP</h3>
+                        <h5>Buy, sell and find just about anything using the app on your mobile.</h5>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 col-xl-3 link-col">
+                  <div>
+                    <h6>GET YOUR APP TODAY</h6>
+                    <div class="row inner-row">
+                      <div class="col-sm-6 store1">
+                        <a href=""><img id="store-img" src="http://pluspng.com/img-png/download-on-app-store-png-click-the-qr-code-to-show-the-download-link-800.png"></a>
+                      </div>
+                      <div class="col-sm-6 store2">
+                        <a href=""><img id="store-img" src="https://help.acuityscheduling.com/hc/article_attachments/360003711111/playstore.png"></a>
+                      </div>
+                    </div>
+                  </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second container end -->
+            
+            <!-- Third container -->
+            <div class="container-fluid" id="third-container">
+              <div class="row">
+                <!-- <div class=" col-lg-1 col-xl-1 col-1">
+                  
+                </div> -->
+                <div class="col-sm-12 col-lg-2 col-xl-2 col-2">
+                  <h6>POPULAR LOCATIONS</h6>
+                  <ul>
+                    <!-- <li>POPULAR LOCATIONS</li> -->
+                    <li>Kolkata</li>
+                    <li>Mumbai</li>
+                    <li>Chennai</li>
+                    <li>Pune</li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-lg-2 col-xl-2 col-3">
+                  <h6>TRENDING LOCATIONS</h6>
+                  <ul>
+                    <li>Bhubaneshwar</li>
+                    <li>Hyderabad</li>
+                    <li>Chandigarh</li>
+                    <li>Nashik</li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-lg-2 col-xl-2 col-4">
+                  <h6>ABOUT US</h6>
+                  <ul>
+                    <li>About OLX Group</li>
+                    <li>Careers</li>
+                    <li>Contact Us</li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-lg-2 col-xl-2 col-5">
+                  <h6>OLX</h6>
+                  <ul>
+                    <li>Help</li>
+                    <li>Sitemap</li>
+                    <li>Legal & Privacy information</li>
+                  </ul>
+                </div>
+                <div class=" col-sm-12 col-lg-2 col-xl-2 col-6">
+                  <h6>FOLLOW US</h6>
+                  <ul class="ul-1">
+                    <li><a href=""><img src="https://img.icons8.com/carbon-copy/25/000000/facebook-circled.png"></a></li>
+                    <li><a href=""><img src="https://img.icons8.com/carbon-copy/25/000000/instagram-new.png"></a></li>
+                    <li><a href=""><img src="https://img.icons8.com/dotty/25/000000/twitter-circled.png"></a></li>
+                    <li><a href=""><img src="https://img.icons8.com/dotty/25/000000/youtube-play.png"></a></li>
+                  </ul>
+                  <ul class="ul-2">
+                    <li><a href=""><img class="lastimg-1" src="http://pluspng.com/img-png/download-on-app-store-png-click-the-qr-code-to-show-the-download-link-800.png"></a></li>
+                    <li><a href=""><img class="lastimg-2" src="https://help.acuityscheduling.com/hc/article_attachments/360003711111/playstore.png"></a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-1 col-xl-1 col-7">
+
+                </div>
+              </div>
+            </div>
+            <!-- third container end -->
+            <footer>
+              <div class="container-fluid" id="fourth-container">
+                  <p id="p-val">Other Countries</p>
+                  <a href="">Pakistan -</a>
+                  <a href="">South Africa</a>
+                  <ul>
+                    <li id="one">Free Classifieds in India</li>
+                    <li id="two">@</li>
+                    <li id="three">2006-2019 OLX</li>
+                  </ul>
+              </div>
+            </footer>
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

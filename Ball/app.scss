@@ -1,0 +1,35 @@
+body{
+    margin:0;
+}
+div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid red;
+    position: relative;
+    animation-name: ball;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+  }
+
+@keyframes ball {
+    0%   {left:0px; top:0px;}
+    // 12%  {left:700px; top:300px;}
+    25%  {left:1340px; top:0px;}
+    50%  {left:1340px; top:600px;}
+    75%  {left:0px; top:600px;}
+    100% {left:0px; top:0px;}
+  }
+
+
+  @media(max-width:414px){
+    @keyframes ball {
+      0%   {left:0px; top:0px;}
+      25%  {left:93%;; top:0px;}
+      50%  {left:93%; top:704px;}
+      75%  {left:0px; top:704px;}
+      100% {left:0px; top:0px;}
+    }
+}
