@@ -1,0 +1,18 @@
+footer{
+    height: 200px;
+    background: black;
+    padding-top: 40px;
+    div{
+        ul{
+            text-align: center;
+            list-style-type: none;
+            padding-left: 0px;
+            color: white;
+            li{
+                font-size: 15px;
+                padding-top: 10px;
+                font-family: monospace;
+            }
+        }
+    }
+}

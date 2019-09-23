@@ -1,0 +1,18 @@
+div{
+    text-align: center;
+    p{
+        font-weight: 700;
+        font-size: 40px;
+    }
+    ul{
+        font-size: 18px;
+        font-weight: 500;
+        list-style-type: none;
+        padding-left: 0px;
+        li{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-top: 10px;
+        }
+    }
+}
