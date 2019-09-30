@@ -15,21 +15,37 @@ export class Mobiles{
         // console.log(this.item.items);
     }
 
+    
     addToCart(mobiles){
-        var exists=false
-            this.item.items.filter(val=>{
-                if(mobiles.id === val.id) {
-                    val.count +=1;
-                    exists = true
-                    console.log("addedd");
-                }
-            });
+        var exist=false;
+       this.item.items.forEach(function(val){
+           if(mobiles['id'] === val['id']){
+               val.count +=1;
+               console.log("added");
+               console.log(val.count);
+               exist = true;
+           }
+       })
+       if(!exist){
+           this.item.items.push(mobiles);
+           console.log("pushed");
+       }
+   }
+    // addToCart(mobiles){
+    //     var exists=false
+    //         this.item.items.filter(val=>{
+    //             if(mobiles.id === val.id) {
+    //                 val.count +=1;
+    //                 exists = true
+    //                 console.log("addedd");
+    //             }
+    //         });
         
-        if(!exists) {
-            this.item.items.push(mobiles)
-            console.log("pushed");
-        }
-        }
+    //     if(!exists) {
+    //         this.item.items.push(mobiles)
+    //         console.log("pushed");
+    //     }
+    //     }
 
     // addToCart(mobiles){
     //     // console.log(this.item);
