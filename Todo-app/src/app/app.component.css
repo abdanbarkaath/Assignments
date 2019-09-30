@@ -1,0 +1,79 @@
+h1 {
+    text-align: center;
+    font-family: cursive;
+  }
+  
+  div {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  div #main-text {
+    font-family: cursive;
+    height: 35px;
+    font-size: 18px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+    -webkit-box-decoration-break: unset;
+            box-decoration-break: unset;
+    padding: 2px;
+  }
+  
+  #sub {
+    font-size: 18px;
+    font-family: cursive;
+    width: 90px;
+    height: 42px;
+    background: black;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  ul {
+    margin: 0 auto;
+    list-style-type: decimal;
+    padding-left: 20px;
+    height: 35px;
+    width: 500px;
+  }
+  
+li {
+    font-family: cursive;
+    font-size: 18px;
+    width: 480px;
+    height: 100%;
+    padding-top: 10px;
+}
+  
+  #del{
+    font-family: cursive;
+    font-size: 16px;
+    width: 80px;
+    height: 100%;
+    float: right;
+    margin-left: 5px;
+    background: black;
+    border-radius: 5px;
+    color: white;
+  }
+  #done{
+    font-family: cursive;
+    font-size: 16px;
+    width: 80px;
+    height: 100%;
+    float: right;
+    margin-left: 5px;
+    background: black;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .strikethrough {
+    text-decoration: line-through;
+}
+.none{
+  text-decoration: none;
+}
+  /*# sourceMappingURL=app.css.map */

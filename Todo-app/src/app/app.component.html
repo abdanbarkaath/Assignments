@@ -1,0 +1,23 @@
+<!-- <h1 id="hi">Todo list</h1>
+    <div>
+    <td><input id="main-text" type="text" name="todo"></td>
+    <td><button id="sub" type="submit" value="Add" (click)="add()">Add</button></td>
+    <ul id="rows">
+      
+    </ul>
+    </div> -->
+
+
+<div>
+    <input id="main-text" type="text"[(ngModel)]="textValue">
+    <button id="sub" type="submit" (click) = 'addVal(textValue)'>Add</button>
+</div>
+<ul id="rows">
+      <li *ngFor="let todo of todoList;let i=index">
+      <span  [ngClass]="{'strikethrough':(todo.state === 'done')}">{{todo.val}}</span>
+      <button id="del" (click)='deleteItem(i)'>Delete</button>
+      <button id="done"(click)='commpletedItem(i)'>Done</button>
+      </li>
+  </ul>
+  <server-root></server-root>
+  <server-root></server-root>
