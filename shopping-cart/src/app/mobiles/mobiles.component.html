@@ -1,0 +1,21 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img id="stretch" class="d-block w-100" src="https://rukminim1.flixcart.com/www/816/816/promos/28/09/2019/ac69dfa5-6b6d-442f-b6eb-2c099038734c.png?q=90" alt="First slide">
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+        <div class="col-lg-4 col-sm-6" *ngFor="let mobile of mobiles">
+            <div class="card"  style="width:90%;" >
+                <div class="card-body">
+                  <img class="card-img-top" id="img-1" src="{{mobile.image}}" alt="Card image cap">
+                  <h5 class="card-title">{{mobile.name}}</h5>
+                  <p class="card-text">₹{{mobile.price}}</p>
+                  <a class="btn  btn-warning"  (click)=addToCart(mobile)>add to cart{{count}}</a>
+                </div>
+            </div>
+        </div>
+</div>
+

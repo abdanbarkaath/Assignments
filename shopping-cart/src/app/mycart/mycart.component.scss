@@ -1,0 +1,42 @@
+
+.container{
+    width: 70%;
+    #empty{
+        text-align: center;
+        margin-top: 200px;
+        h1{
+            padding-left: 10px;
+            display: inline;
+        }
+    }
+    .row{
+        #coloumn{
+            .card{
+                // border: 1px solid red;
+                height: 250px;
+                .card-horizontal{
+                    display: flex;
+                    flex: 1 1 auto;
+                    .img-square-wrapper{
+                        width: 300px;
+                        .img-1{
+                            width: 300px;
+                            height: 200px;
+                            padding: 10px;
+                            object-fit: contain;
+                        }
+                    }
+                    .card-body{
+                        .card-title{
+                            font-size: 30px;
+                            font-weight: 600;
+                        }
+                        .card-text{
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

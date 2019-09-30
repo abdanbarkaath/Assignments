@@ -1,0 +1,37 @@
+.card-body{
+    // border: 2px solid black;
+    max-width: 100%;
+    padding: 10px;
+    #img-1{
+    height: 225px;
+    object-fit: fill;
+    }
+}
+
+#stretch{
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.card-body{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    h5{
+        margin-top: 10px;
+        margin-bottom: 0;
+
+    }
+}
+
+.btn-warning{
+    padding: 0;
+    height: 30px;
+    width: 110px;
+}
+p{
+    font-family: inherit;
+    font-weight: 500;
+    padding: 0px;
+}
