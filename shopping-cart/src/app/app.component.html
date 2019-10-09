@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand sticky-top topnav">
+        <a class="navbar-brand" routerLink="mobiles"><img src="https://img.icons8.com/cotton/25/000000/shopping.png"><span> ShopZone</span></a>
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav pt-1">
+                <li class="nav-item">
+                     <div class="dropdown" id="drp-down">
+                  <a class="btn btn btn-outline-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Catogories
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="items">
+                    <a class="dropdown-item" routerLink="shoes">Shoes</a>
+                    <a class="dropdown-item" routerLink="mobiles">Mobiles</a>
+                    <a class="dropdown-item" routerLink="tshirts">Tshirts</a>
+                  </div>
+                </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav flex-row ml-auto" id="ul-3">
+                   <li class="nav-item"> <a routerLink="cart"><button type="button" class="btn btn-light sell-btn" ><img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-cart--v2.png"><p id="cart">Cart {{list.length}}</p></button></a></li>
+                  </ul>
+        </div>
+    </nav>
+
+    
+
+
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
