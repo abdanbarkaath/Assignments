@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand sticky-top topnav">
       <a class="navbar-brand" routerLink="mobiles">
         <img src="https://img.icons8.com/cotton/25/000000/shopping.png" />
-        <span>ShopZone</span>
+        <span>Company</span>
       </a>
       <div class="navbar-collapse collapse">
         <ul class="navbar-nav pt-1">
@@ -31,7 +31,7 @@
             </div>
           </li>
         </ul>
-        <ul class="nav navbar-nav flex-row ml-auto" id="ul-3">
+        <!-- <ul class="nav navbar-nav flex-row ml-auto" id="ul-3">
           <li class="nav-item">
             <a routerLink="cart">
               <button type="button" class="btn btn-light sell-btn">
@@ -40,14 +40,14 @@
               </button>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
       <div class="sidenav">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Clients</a>
+        <a href="">Contact</a>
       </div>
       <div id="main">
       <router-view />
