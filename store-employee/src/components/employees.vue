@@ -129,10 +129,20 @@
             <label>Phone no :</label>
             <input type="text" v-model="employee.phone" placeholder="Phone no" />
             <br />
-            <button v-if="toggle == 'add'" type="button" class="btn btn-primary" v-on:click="postData(employee)">
+            <button
+              v-if="toggle == 'add'"
+              type="button"
+              class="btn btn-primary"
+              v-on:click="postData(employee)"
+            >
               <span>Add User</span>
             </button>
-            <button v-if="toggle == 'edit'" type="button" class="btn btn-primary" v-on:click="update(employee.id)">
+            <button
+              v-if="toggle == 'edit'"
+              type="button"
+              class="btn btn-primary"
+              v-on:click="update(employee.id)"
+            >
               <span>Update User</span>
             </button>
             <button
@@ -149,6 +159,7 @@
 </template>
 
 <script>
+import { mapActions,mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -165,13 +176,17 @@ export default {
   },
 
   computed: {
-    people() {
-      // console.log("run"+this.$store.state.employees);
-      return this.$store.state.employees;
-    }
+    // people() {
+    //   // console.log("run"+this.$store.state.employees);
+    //   return this.$store.getters.people;
+    // },
+    ...mapGetters(["people"])
   },
 
   methods: {
+    ...mapActions([
+      'productaction'
+    ]),
     listView() {
       this.display = "list";
     },
@@ -187,17 +202,18 @@ export default {
       this.toggle = "edit";
       //   console.log(this.employee);
     },
-    change(){
-        this.toggle = "add"
+    change() {
+      this.toggle = "add";
     },
+    // ...mapActons([]),
     loadData() {
       axios
         .get("http://localhost:3000/users")
         .then(response => {
           console.log(response.data);
-          // const change =  JSON.parse(JSON.stringify(response.data));
-          // console.log(change);
-          this.$store.dispatch("productaction", response.data);
+          // ...mapActons([])
+          this.productaction(response.data);
+          // this.$store.dispatch("productaction", response.data);
         })
         .catch(error => {
           console.log(error);
@@ -207,7 +223,7 @@ export default {
       axios
         .put("http://localhost:3000/users/" + id, this.employee)
         .then(response => {
-          // this.$store.dispatch('productaction',this.employee)
+          
         })
         .catch(error => {
           console.log(error);
@@ -216,15 +232,15 @@ export default {
     async del(id, i) {
       try {
         await axios.delete(" http://localhost:3000/users/" + id);
-        this.people.splice(i,1)
+        this.people.splice(i, 1);
       } catch (e) {
         console.log(e);
       }
     },
     async postData() {
       try {
-        await axios.post(" http://localhost:3000/users",this.employee);
-        this.people.push(this.employee)
+        await axios.post(" http://localhost:3000/users", this.employee);
+        this.people.push(this.employee);
       } catch (e) {
         console.log(e);
       }
