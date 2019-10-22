@@ -2,12 +2,6 @@
   <div>
     <div class="container">
       <highcharts :options="chartOptions"></highcharts>
-       <div class="my-5">
-        <div class="alert alert-info">Loading...</div>
-        <div>
-          <canvas id="myChart"></canvas>
-        </div>
-      </div>
     </div>
   </div>
 </template>
