@@ -4,8 +4,10 @@
       <form id="forms">
         <div id="login-back">
           <img id="lock" src="https://img.icons8.com/ios/70/000000/lock.png" />
+          <div id="login-dash">
           <h2>Login</h2>
           <p>login to go to the dashboard</p>
+          </div>
         </div>
         <div class="form-group">
           <label id="lab"><img src="https://img.icons8.com/pastel-glyph/25/000000/user-male--v1.png"> Name</label>
@@ -39,6 +41,7 @@
             @click.prevent="check"
           > <img src="https://img.icons8.com/ios/20/000000/lock.png" /> Login</button>
         </div>
+        <hr>
         <div class="hint-text">
           Want to create an account?
           <a href @click.prevent="go">Sign up here</a>
@@ -109,22 +112,29 @@ export default {
   background: white;
   #forms {
     width: 100%;
+    height: 500px;
     #login-back {
       background: #4bc48e;
+      padding-top: 25px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 30px;
+      margin-bottom: 20px;
       #lock {
-        padding-right: 20px;
+        padding-right: 40px;
         float: right;
-        padding-top: 25px;
+        // padding-top: 25px;
       }
       h2 {
         text-align: left;
-        padding-top: 35px;
-        padding-left: 10px;
+        padding-top: 10px;
+        // padding-left: 10px;
+        font-size:25px;
       }
       p {
         text-align: left;
-        padding-left: 10px;
-        padding-bottom: 20px;
+        // padding-left: 10px;
+        // padding-bottom: 20px;
         font-size: 12px;
       }
     }
@@ -140,6 +150,8 @@ export default {
   .form-group {
     font-weight: 550;
     padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     #lab{
       float: left;
       color: black;
@@ -150,6 +162,10 @@ export default {
   }
   .hint-text{
     color:black;
+    padding-top: 10px;
+    float: right;
+    padding-right: 25px;
+    font-size: 13px;
   }
 }
 </style>

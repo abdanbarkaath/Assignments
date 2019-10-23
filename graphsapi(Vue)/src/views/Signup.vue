@@ -3,7 +3,7 @@
     <div class="signup">
       <form id="forms">
         <div id="sign-back">
-          <img id="pen" src="https://img.icons8.com/ios/60/000000/edit.png" />
+          <img id="pen" src="https://img.icons8.com/ios/50/000000/edit.png" />
           <h2>Sign Up</h2>
           <p style="font-size:12px">Please fill in this form to create an account!</p>
         </div>
@@ -188,12 +188,16 @@ export default {
   #sign-back {
     text-align: left;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: white;
-    padding: 15px;
+    padding: 25px;
+    padding-left: 25px;
     background: red;
+    h2{
+      font-size: 25px;
+    }
     #pen {
-      padding-right: 10px;
+      padding-right: 15px;
       float: right;
     }
   }
@@ -210,7 +214,7 @@ export default {
       height: 605px;
     }
     .form-group {
-      padding: 0 10px 0 10px;
+      padding: 0 25px 0 25px;
       margin-bottom: 15px;
       font-weight: 550;
     }
@@ -223,6 +227,9 @@ export default {
       font-size: 20px;
       margin-top: 15px;
       height: 35px;
+    }
+    .hint-text{
+      font-size: 13px;
     }
   }
 }
