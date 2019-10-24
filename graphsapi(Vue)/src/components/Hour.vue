@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container-fluid">
       <highcharts :options="chartOptions"></highcharts>
     </div>
   </div>
@@ -26,6 +26,8 @@ export default {
         chart: {
           type: "column",
           loading:false,
+          width:1310
+
         },
         title: {
           text: "Hourly"
@@ -37,7 +39,7 @@ export default {
         yAxis: {
          
         },
-        colors: ["black"],
+        colors: ["#7952b3"],
 
         series: []
       }

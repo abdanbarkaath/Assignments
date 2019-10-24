@@ -1,14 +1,18 @@
 <template>
   <div>
     <div id="main-back">
-      <h1>Weather Api</h1>
-      <input id="getin" type="text" v-model="time" />
-      <button class="btn btn-outline-primary sub" @click="sendData">
+      <div id="inside-back">
+        <h1><span>
+          <img src="https://img.icons8.com/plasticine/100/000000/windy-weather.png" />
+        </span>Weather Api</h1>
+        <input id="getin" type="text" v-model="time" />
+      </div>
+      <button class="btn btn-danger sub" @click="sendData">
         <router-link to="/weather?mode=day" />Get Temperatures
       </button>
       <br />
-      <button class="btn btn-primary day" @click="goDay">Daily</button>
-      <button class="btn btn-primary hour" @click="goHourly">Hourly</button>
+      <button class="btn btn-success day" v-if="check" @click="goDay">Daily</button>
+      <button class="btn btn-success hour" v-if="check" @click="goHourly">Hourly</button>
       <router-view />
       <vue-progress-bar></vue-progress-bar>
     </div>
@@ -20,7 +24,7 @@ import { mapActions, mapGetters } from "vuex";
 import VueRouter from "../router/index";
 import { Chart } from "highcharts-vue";
 import axios from "axios";
-import VueProgressBar from 'vue-progressbar'
+import VueProgressBar from "vue-progressbar";
 
 export default {
   computed: {
@@ -30,8 +34,9 @@ export default {
 
   data() {
     return {
+      check: false,
       time: null,
-      loading:false,
+      loading: false,
       val: null
     };
   },
@@ -39,7 +44,6 @@ export default {
     ...mapActions(["mutateMethod"]),
     ...mapActions(["mutateCity"]),
     loadKey() {
-      // this.$Progress.start()
       axios
         .get(
           "http://dataservice.accuweather.com/locations/v1/cities/IN/search?apikey=rRIAyCDjOM3B7vL2asO8KA9ytn4NQAIp&q=" +
@@ -52,8 +56,8 @@ export default {
           this.mutateCity(this.val);
           console.log(this.temp);
           this.loading = true;
+          this.check = true;
           this.$router.push({ name: "day" });
-          // this.$Progress.finish();
         });
     },
     goHourly() {
@@ -73,65 +77,38 @@ export default {
 
 <style lang="scss" scoped>
 #main-back {
-  padding-top: 50px;
-  height: 625px;
-  background: lightblue;
+  padding-top: 20px;
+  height: 687px;
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Weather-Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  #inside-back{
+    h1{
+      height: 70px;
+      margin-right: 15px;
+    }
+  }
   #getin {
     border-radius: 5px;
     height: 35px;
+    width: 300px;
     box-shadow: 0;
   }
   .sub {
-    margin-left: 5px;
+    margin-top: 5px;
+    width: 300px;
+    // height: 33px;
+    // margin-left: 5px;
   }
   .day {
-    margin: 10px;
+    margin: 10px 5px 25px 0px;
+    width: 145px;
   }
   .hour {
-    margin: 10px;
+    margin: 10px 0px 25px 5px;    
+    width: 145px;
   }
 }
 
-//loader
-// @import 'https://fonts.googleapis.com/css?family=Raleway';
-
-.preloader {
-  width: 100%;
-  height: 100vh;
-  background: #3498db;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  position: relative;
-  &__status {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  &__status-text {
-    font-size: 40px;
-    font-family: "Raleway", sans-serif;
-    margin-bottom: 20px;
-  }
-  &__status-loader {
-    width: 100%;
-    height: 3px;
-  }
-  &__status-bar {
-    background: white;
-    height: 100%;
-  }
-}
-.frontpage {
-  height: 100vh;
-  background: #34495e;
-}
-.frontpage__title {
-  color: white;
-}
 </style>

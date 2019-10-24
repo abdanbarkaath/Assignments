@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container-fluid">
       <highcharts :options="chartOptions"></highcharts>
     </div>
   </div>
@@ -24,7 +24,9 @@ export default {
       store: 2,
       chartOptions: {
         chart: {
-          type: "line"
+          type: "line",
+          width:1400
+          // backgroundColor: '#6c8c5b',
         },
         title: {
           text: "Daily"

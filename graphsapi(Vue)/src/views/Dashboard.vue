@@ -31,9 +31,9 @@
           aria-haspopup="true"
           aria-expanded="false"
         >Options</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="items">
-          <a class="dropdown-item">
-            <router-link to="/weather">Weather</router-link>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="items" style="min-width:100px">
+          <a class="dropdown-item" style="width:80px">
+            <router-link to="/weather" style="width:80px">Weather</router-link>
           </a>
         </div>
       </div>
@@ -367,10 +367,10 @@ export default {
 
         series: [
           {
-            data: [11, 36, 40, 20, 36, 28, 10, 20] // sample data
+            data: [11, 40, 40, 2, 36, 28, 10, 20] // sample data
           },
           {
-            data: [40, 25, 45, 18, 12, 30, 40, 23] // sample data
+            data: [40, 25, 2, 40, 12, 30, 40, 23] // sample data
           }
         ]
       }
@@ -383,6 +383,9 @@ export default {
 </script>
 
 <style lang="scss">
+#items{
+  width: 80px;
+}
 .extend {
   width: 35rem;
   height: 500px;
@@ -465,6 +468,7 @@ export default {
   }
 }
 // NAVBAR ========================================
+
 .topnav {
   span{
     color: #7952b3;
