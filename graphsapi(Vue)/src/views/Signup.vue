@@ -203,7 +203,7 @@ export default {
   }
   #lab {
     float: left;
-    margin-bottom: 1px;
+    margin-bottom: .5rem;
   }
   .signup {
     width: 400px;
@@ -215,7 +215,7 @@ export default {
     }
     .form-group {
       padding: 0 25px 0 25px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       font-weight: 550;
     }
     a {

@@ -102,11 +102,11 @@ export default {
     // margin-left: 5px;
   }
   .day {
-    margin: 10px 5px 25px 0px;
+    margin: 10px 5px 15px 0px;
     width: 145px;
   }
   .hour {
-    margin: 10px 0px 25px 5px;    
+    margin: 10px 0px 15px 5px;    
     width: 145px;
   }
 }

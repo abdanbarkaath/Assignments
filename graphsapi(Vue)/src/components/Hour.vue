@@ -39,7 +39,7 @@ export default {
         yAxis: {
          
         },
-        colors: ["#7952b3"],
+        colors: ["lightblue"],
 
         series: []
       }
