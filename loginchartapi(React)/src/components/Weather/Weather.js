@@ -89,7 +89,13 @@ export default class Weather extends Component {
               Hourly
             </button>
           </div>
-          <Day cityCode={this.state.cityCode}></Day>
+          {/* <div className="container"> */}
+            <div className="row">
+              <div className="col-lg-12">
+                <Day cityCode={this.state.cityCode}></Day>
+              </div>
+            </div>
+          {/* </div> */}
         </div>
       </div>
     ];
@@ -121,10 +127,13 @@ export default class Weather extends Component {
               Hourly
             </button>
           </div>
-          <div className="weeks">
-            <Week cityCode={this.state.cityCode}></Week>
-          </div>
-          {/* <Day  cityCode = {this.state.cityCode}></Day> */}
+          {/* <div className="container"> */}
+            <div className="row">
+              <div className="col-lg-12">
+                <Week cityCode={this.state.cityCode}></Week>
+              </div>
+            </div>
+          {/* </div> */}
         </div>
       </div>
     ];

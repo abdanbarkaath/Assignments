@@ -1,9 +1,12 @@
-.display {
-  width: 1345px;
-  height: 400px;
-}
-
 canvas {
   background-color: white !important;
+  height: 400px !important;
+  width: 1346px !important;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+
+.disp {
+  height: 8px;
 }
 /*# sourceMappingURL=day.css.map */

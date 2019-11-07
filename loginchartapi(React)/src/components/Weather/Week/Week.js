@@ -4,7 +4,6 @@ import { Line } from "react-chartjs-2";
 import "./week.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-
 export default class Week extends Component {
   constructor(props) {
     super(props);
@@ -19,9 +18,9 @@ export default class Week extends Component {
 
   componentDidMount() {
     this.setState({
-        show:1,
-        nows:Math.floor(Math.random() * (60 - 20 + 1) + 20),
-      })
+      show: 1,
+      nows: Math.floor(Math.random() * (60 - 20 + 1) + 20)
+    });
     axios
       .get(
         "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/" +
@@ -30,9 +29,9 @@ export default class Week extends Component {
       )
       .then(response => {
         this.setState({
-            show:1,
-            nows:30,
-          })
+          show: 1,
+          nows: 30
+        });
         // console.log(response.data);
         var val = response.data;
         //   console.log(this.val[0]);
@@ -46,15 +45,16 @@ export default class Week extends Component {
           xvalue.push(q[0]);
           // console.log(temp);
           this.setState({
-              nows:70,
-              show:1,
+            nows: 70,
+            show: 1,
             data: {
               labels: xvalue,
               datasets: [
                 {
                   label: "My First dataset",
                   fill: true,
-                  responsive: false,
+                  responsive: true,
+                  maintainAspectRatio:false,
                   backgroundColor: "rgba(75,192,192,0.4)",
                   borderColor: "rgba(75,192,192,1)",
                   data: temp
@@ -63,30 +63,40 @@ export default class Week extends Component {
             }
           });
           this.setState({
-            show:1,
-            nows:100
-        })
+            show: 1,
+            nows: 100
+          });
         });
         this.setState({
-            show:0,
-          })
+          show: 0
+        });
       });
   }
 
   render() {
-      
     // console.log(this.state.data);
     let progress;
-    if(this.state.show === 1){
-        progress =<ProgressBar className="disp" animated variant="success" now={this.state.nows}  />
-    }else{
-        progress=''
+    if (this.state.show === 1) {
+      progress = (
+        <ProgressBar
+          className="disp"
+          animated
+          variant="success"
+          now={this.state.nows}
+        />
+      );
+    } else {
+      progress = "";
     }
     return (
       <div>
-          {progress}
-        <div className="displays">
-          <Line width={1000} height={200} data={this.state.data}></Line>
+        {progress}
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="displays">
+              <Line  data={this.state.data}></Line>
+            </div>
+          </div>
         </div>
       </div>
     );
